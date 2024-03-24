@@ -1,0 +1,76 @@
+#category {
+  text-align: center;
+  padding: 40px 80px;
+}
+
+#category .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+#category .cat {
+  width: 25%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border-radius: 25px;
+  margin: 15px 0;
+  transition: 0.3s;
+  position: relative;
+}
+#category .cat img {
+  width: 100%;
+  min-height: 80%;
+  max-height: 80%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.submit_input1,
+.submit_input2 {
+  color: black;
+  position: flex;
+  margin: -10% auto 1% auto;
+  border: 0.1vw solid whitesmoke;
+  width: 13.5vw;
+  font-size: 2.5vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: white;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.submit_input3 {
+  color: black;
+  position: flex;
+  margin: -10% auto 1% auto;
+  border: 0.1vw solid whitesmoke;
+  width: 16vw;
+  font-size: 2.5vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: white;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#category .cat img:hover {
+  cursor: pointer;
+}
+
+.cat:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+  #category .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #category .cat {
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+}

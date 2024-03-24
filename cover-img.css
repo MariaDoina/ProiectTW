@@ -1,0 +1,63 @@
+.cover img {
+  margin-top: 3%;
+  background-size: cover;
+  width: 55vw;
+  height: 47vw;
+}
+
+.text {
+  position: absolute;
+  top: 27%;
+  left: 35%;
+  font-size: 2.2vw;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+}
+
+.submit_input {
+  position: absolute;
+  top: 420%;
+  left: 35%;
+  padding: 1vw;
+  font-size: 1.3vw;
+  text-transform: uppercase;
+  background-color: crimson;
+  border: none;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.1vw;
+}
+
+.submit_input:hover {
+  background-color: red;
+}
+
+.new img {
+  position: flex;
+  margin-top: -6%;
+  width: 45vw;
+  height: 55vw;
+  margin-left: 27%;
+}
+
+.new p {
+  position: flex;
+  margin-top: -3.2vw;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: lighter;
+  margin-left: 34%;
+}
+
+.new a {
+  text-decoration: none;
+  color: white;
+}
+
+.new a:hover {
+  color: red;
+}

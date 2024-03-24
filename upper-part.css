@@ -1,0 +1,102 @@
+.ad {
+  border: 1px solid rgb(99, 28, 116);
+  background-color: blueviolet;
+  height: 5vh;
+}
+
+.ad ul {
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+}
+
+.ad ul li {
+  margin-top: -0.2%;
+  font-size: 1vw;
+  font-family: barlow condensed, sans-serif;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.ad ul li:first-child {
+  margin-right: 20%;
+}
+
+.ad ul li:last-child {
+  margin-left: 20%;
+}
+
+.ad ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li {
+  margin-top: 4vh;
+  float: left;
+  position: relative;
+  left: 80%;
+  width: 7vw;
+  font-family: barlow condensed, sans-serif;
+}
+
+.nav ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.nume_site {
+  font-size: 2vw;
+  font-family: "Merienda", sans-serif;
+  text-transform: capitalize;
+  font-weight: bolder;
+  letter-spacing: 0.3vw;
+  color: purple;
+  margin-top: -4.3vw;
+  margin-left: 8vw;
+}
+
+.search {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+  border-radius: 2.8vw;
+  background: #f6f6f6;
+  width: 42vw;
+  transition: box-shadow 0.25s;
+  margin-left: 30%;
+  margin-top: -1vw;
+}
+
+.search:focus-within {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.search_input {
+  font-size: 1vw;
+  font-family: "Lexend", sans-serif;
+  color: #333;
+  margin-left: 1.4vw;
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 30vw;
+  flex: 1;
+}
+
+.search_input::placeholder,
+.search_icon {
+  color: rgba(0, 0, 0, 0.5);
+}
