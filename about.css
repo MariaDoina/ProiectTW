@@ -93,15 +93,25 @@
   padding-left: 10px;
 }
 
-@media (max-width: 767px) {
-  .box-col {
-    width: 50%;
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 574px) {
+@media (max-width: 766px) {
   .box-col {
     width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .box-col h4 {
+    position: relative; /* Setăm poziționarea relativă pentru a referenția pseudoelementul */
+  }
+
+  .box-col h4:before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centrare pe orizontală */
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 40px;
   }
 }
