@@ -48,12 +48,15 @@ html {
 }
 
 .ad ul li:first-child {
-  font-size: 18px;
+  font-size: 0.9em;
   font-weight: 1000;
 }
 
-.nav ul {
+.nav {
   display: flex;
+}
+
+.nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -63,7 +66,7 @@ html {
   margin-top: 4vh;
   float: left;
   position: relative;
-  left: 80%;
+  left: 59em;
   width: 7vw;
   font-family: barlow condensed, sans-serif;
 }
@@ -76,15 +79,80 @@ html {
 }
 
 .nume_site {
-  font-size: 2vw;
+  font-size: 2.5vw;
   font-family: "Merienda", sans-serif;
   text-transform: capitalize;
   font-weight: bolder;
-  letter-spacing: 0.3vw;
+  letter-spacing: -0.6vw;
   color: purple;
-  margin-top: -4.3vw;
-  margin-left: 8vw;
+  margin-top: 1.7vw;
+  margin-left: 2%;
+  display: inline-block;
 }
+
+.nume_site span {
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.nume_site:hover span,
+.nume_site:focus span {
+  animation: wave 1s infinite linear;
+  cursor: default;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-0.7em);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(0.7em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.nume_site span:nth-child(1) {
+  animation-delay: 0s;
+}
+.nume_site span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.nume_site span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.nume_site span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.nume_site span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.nume_site span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.nume_site span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.nume_site span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.nume_site span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.nume_site span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.nume_site span:nth-child(11) {
+  animation-delay: 1s;
+}
+
 /*search bar*/
 .search {
   width: max-content;
@@ -358,39 +426,46 @@ html {
   padding-left: 10px;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 300px) and (max-width: 500px) {
   /*partea de sus*/
   .ad {
     height: 5vh;
   }
   .ad ul li {
     margin-top: -3%;
-    font-size: 2vw;
+    font-size: 0.5em;
   }
   .ad ul li:first-child {
-    font-size: 7px;
+    font-size: 0.4em;
+    margin-left: 2em;
   }
+
+  .ad ul li:last-child {
+    margin-right: 2em;
+  }
+
   .nav ul li {
     margin-top: 1vh;
-    margin-right: 1vw;
-    left: 75%;
+    left: 240%;
   }
   .nav ul li a p {
     display: none;
   }
 
   .nume_site {
-    font-size: 5vw;
-    letter-spacing: 0.3vw;
-    margin-top: -5vh;
-    margin-left: 3%;
+    font-size: 3vw;
+    letter-spacing: -0.2vh;
+    margin-left: 2%;
+    margin-top: 2.9%;
   }
+
   .search {
-    margin-top: -1vh;
+    margin-top: 1vh;
   }
 
   /*cover img*/
   .cover img {
+    margin-top: 8%;
     width: 100%;
     height: auto;
   }
@@ -457,7 +532,56 @@ html {
   }
 }
 
-@media (min-width: 500px) and (max-width: 1100px) {
+@media (min-width: 500px) and (max-width: 1000px) {
+  .ad ul li {
+    margin-top: -1%;
+    font-size: 2vw;
+  }
+
+  .ad ul li:first-child {
+    margin-top: -1.5%;
+    margin-left: 1.5%;
+  }
+
+  .ad ul li:last-child {
+    margin-right: 1.5%;
+  }
+
+  /*nume_site + iconite*/
+  .nav {
+    margin-top: 0.5vh;
+  }
+  .nav ul li {
+    margin-right: -2vw;
+    margin-top: 1.9vh;
+    left: 400%;
+  }
+
+  .nav ul li a p {
+    display: none;
+  }
+
+  .nume_site {
+    font-size: 3vw;
+    letter-spacing: -0.5vh;
+  }
+
+  /*cover img*/
+  .cover img {
+    width: 80%;
+    height: auto;
+  }
+  .text {
+    top: 17%;
+    left: 28%;
+    font-size: 3vw;
+  }
+  .submit_input {
+    font-size: 4vw;
+    top: 500%;
+    left: 25%;
+  }
+
   /*women, men, acc*/
   .container {
     flex-direction: column;
@@ -466,7 +590,7 @@ html {
 
   .container .card {
     width: 60%;
-    height: 70vh;
+    height: 60vh;
     margin-bottom: 5%;
   }
 
@@ -475,11 +599,15 @@ html {
     bottom: 7em;
   }
 
-  .nav ul li {
-    margin-right: -2vw;
+  /*coming soon*/
+  .new img {
+    width: 80%;
+    margin-left: 0;
+    height: 70vh;
   }
 
-  .nav ul li a p {
-    display: none;
+  .new p {
+    font-size: 1.5vw;
+    margin-top: -4vw;
   }
 }
