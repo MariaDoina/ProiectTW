@@ -25,7 +25,7 @@ html {
 }
 
 .ad ul li {
-  margin-top: -0.2%;
+  margin-top: -0.5%;
   font-size: 1vw;
   font-family: barlow condensed, sans-serif;
   list-style-type: none;
@@ -45,6 +45,11 @@ html {
   align-items: center;
   text-decoration: none;
   color: white;
+}
+
+.ad ul li:first-child {
+  font-size: 18px;
+  font-weight: 1000;
 }
 
 .nav ul {
@@ -80,7 +85,7 @@ html {
   margin-top: -4.3vw;
   margin-left: 8vw;
 }
-
+/*search bar*/
 .search {
   width: max-content;
   display: flex;
@@ -116,6 +121,10 @@ html {
 }
 
 /*cover image*/
+.cover {
+  display: flex;
+  justify-content: center;
+}
 .cover img {
   margin-top: 3%;
   background-size: cover;
@@ -150,35 +159,6 @@ html {
 
 .submit_input:hover {
   background-color: red;
-}
-
-/*new collection*/
-.new img {
-  position: flex;
-  margin-top: -6%;
-  width: 45vw;
-  height: 55vw;
-  margin-left: 27%;
-}
-
-.new p {
-  position: flex;
-  margin-top: -3.2vw;
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  font-size: 0.8vw;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: lighter;
-  margin-left: 34%;
-}
-
-.new a {
-  text-decoration: none;
-  color: white;
-}
-
-.new a:hover {
-  color: red;
 }
 
 /* partea cu imagini unde selectezi*/
@@ -253,17 +233,33 @@ html {
   opacity: 1;
 }
 
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
+/*coming soon*/
+.new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new img {
+  margin-top: -6%;
+  width: 45vw;
+  height: 100vh;
+}
 
-  .container .card {
-    width: 80%;
-    height: 70vh;
-    margin-bottom: 5%;
-  }
+.new p {
+  margin-top: -3.2vw;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: lighter;
+}
+
+.new a {
+  color: white;
+}
+
+.new a:hover {
+  color: red;
 }
 
 /*partea de jos a paginii*/
@@ -362,7 +358,83 @@ html {
   padding-left: 10px;
 }
 
-@media (max-width: 766px) {
+@media (max-width: 500px) {
+  /*partea de sus*/
+  .ad {
+    height: 5vh;
+  }
+  .ad ul li {
+    margin-top: -3%;
+    font-size: 2vw;
+  }
+  .ad ul li:first-child {
+    font-size: 7px;
+  }
+  .nav ul li {
+    margin-top: 1vh;
+    margin-right: 1vw;
+    left: 75%;
+  }
+  .nav ul li a p {
+    display: none;
+  }
+
+  .nume_site {
+    font-size: 5vw;
+    letter-spacing: 0.3vw;
+    margin-top: -5vh;
+    margin-left: 3%;
+  }
+  .search {
+    margin-top: -1vh;
+  }
+
+  /*cover img*/
+  .cover img {
+    width: 100%;
+    height: auto;
+  }
+  .text {
+    top: 17%;
+    left: 28%;
+    font-size: 3vw;
+  }
+  .submit_input {
+    font-size: 4vw;
+    top: 600%;
+    left: 25%;
+  }
+
+  /*women, men, acc*/
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .card {
+    width: 80%;
+    height: 35vh;
+    margin-bottom: -10%;
+  }
+
+  .card::before,
+  .card::after {
+    bottom: 4em;
+  }
+
+  /*coming soon*/
+  .new img {
+    width: 100%;
+    margin-left: 0;
+    height: 70vh;
+  }
+
+  .new p {
+    font-size: 2.3vw;
+    margin-left: 0;
+    margin-top: -10vw;
+  }
+  /*partea de jos*/
   .box-col {
     width: 100%;
     margin: 0 auto;
@@ -370,17 +442,44 @@ html {
   }
 
   .box-col h4 {
-    position: relative; /* Setăm poziționarea relativă pentru a referenția pseudoelementul */
+    position: relative;
   }
 
   .box-col h4:before {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Centrare pe orizontală */
+    transform: translateX(-50%);
     bottom: -10px;
     background-color: #e91e63;
     height: 2px;
     box-sizing: border-box;
     width: 40px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1100px) {
+  /*women, men, acc*/
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .card {
+    width: 60%;
+    height: 70vh;
+    margin-bottom: 5%;
+  }
+
+  .card::before,
+  .card::after {
+    bottom: 7em;
+  }
+
+  .nav ul li {
+    margin-right: -2vw;
+  }
+
+  .nav ul li a p {
+    display: none;
   }
 }
